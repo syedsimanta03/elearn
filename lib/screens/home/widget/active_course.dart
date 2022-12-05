@@ -48,18 +48,19 @@ class ActiveCourse extends StatelessWidget {
                             color: kFontLight),
                       ),
                     ],
+                  ),
+                  CircularPercentIndicator(
+                    radius: 60.0,
+                    lineWidth: 5.0,
+                    percent: 0.61,
+                    center: Text(
+                      '61%',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: kAccent),
+                    ),
                   )
                 ],
               ),
-              CircularPercentIndicator(
-                radius: 60.0,
-                lineWidth: 5.0,
-                percent: 0.61,
-                center: Text(
-                  '61%',
-                  style: TextStyle(fontWeight: FontWeight.bold, color: kAccent),
-                ),
-              )
             ]),
           )
         ],
