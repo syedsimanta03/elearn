@@ -18,50 +18,49 @@ class ActiveCourse extends StatelessWidget {
                 border:
                     Border.all(color: kFontLight.withOpacity(0.3), width: 1),
                 borderRadius: BorderRadius.circular(8)),
-            child: Row(children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Image.asset(
-                      'assets/images/progress.png',
-                      width: 60,
-                    ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Image.asset('assets/images/progress.png',
+                            width: 60)),
+                    SizedBox(width: 20),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Symetry theory',
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: kFont),
+                        ),
+                        Text(
+                          '2 lessons left',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: kFontLight),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                CircularPercentIndicator(
+                  radius: 60.0,
+                  lineWidth: 5.0,
+                  percent: 0.61,
+                  center: Text(
+                    '61%',
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(width: 20),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Symetry theory',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: kFont),
-                      ),
-                      Text(
-                        '2 lessons left',
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: kFontLight),
-                      ),
-                    ],
-                  ),
-                  CircularPercentIndicator(
-                    radius: 60.0,
-                    lineWidth: 5.0,
-                    percent: 0.61,
-                    center: Text(
-                      '61%',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, color: kAccent),
-                    ),
-                  )
-                ],
-              ),
-            ]),
+                  progressColor: kAccent,
+                ),
+              ],
+            ),
           )
         ],
       ),
