@@ -3,6 +3,7 @@ import 'package:elearn/models/course.dart';
 import 'package:flutter/material.dart';
 
 class CourseItem extends StatelessWidget {
+
   final Course course;
   CourseItem(this.course);
 
